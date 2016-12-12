@@ -3,7 +3,7 @@
 
                            Toggle current window zoom
                              Inspired by tmux zoom
-                                  Version 0.1
+                                  Version 0.2
 
 
                  Author: Dhruva Sagar (http://dhruvasagar.com)
