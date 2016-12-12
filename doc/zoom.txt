@@ -1,0 +1,48 @@
+*zoom.txt*                     Zoom Window in VIM                       *zoom*
+------------------------------------------------------------------------------
+
+                           Toggle current window zoom
+                             Inspired by tmux zoom
+                                  Version 0.1
+
+
+                 Author: Dhruva Sagar (http://dhruvasagar.com)
+               License: MIT (http://opensource.org/licenses/MIT)
+
+------------------------------------------------------------------------------
+CONTENTS                                                         *zoom-contents*
+
+      1. Usage ......................................... |zoom-usage|
+      2. Mappings ...................................... |zoom-mappings|
+      3. Contributing .................................. |zoom-contributing|
+      4. Report Issues ................................. |zoom-report-issues|
+      4. Credits ....................................... |zoom-credits|
+
+------------------------------------------------------------------------------
+USAGE                                                               *zoom-usage*
+
+      Use the provided mapping `<C-W>m` on the current split and it will toggle
+      it to zoom in and out on subsequent calls.
+
+------------------------------------------------------------------------------
+MAPPINGS                                                         *zoom-mappings*
+
+      `<C-W>m`: mapping to toggle zoom of current window
+
+------------------------------------------------------------------------------
+CONTRIBUTING                                                 *zoom-contributing*
+
+      If you want to contribute, fork the repo, make changes and send a PR on
+      Github at https://github.com/dhruvasagar/vim-zoom.
+
+------------------------------------------------------------------------------
+REPORT ISSUES                                               *zoom-report-issues*
+
+      If you discover any issues, please report them at
+      https://github.com/dhruvasagar/vim-zoom/issues
+
+------------------------------------------------------------------------------
+CREDITS                                                           *zoom-credits*
+
+      The idea is inspired heavily from tmux's zoom functionality
+
