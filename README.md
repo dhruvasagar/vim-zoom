@@ -1,4 +1,4 @@
-# VIM Zoom v0.2
+# VIM Zoom v0.3
 
 A simple plugin to toggle zoom of current window within the current tab.
 
