@@ -14,7 +14,7 @@ your ~/.vim folder. (not recommended)
 
 ## Usage
 
-Simply use the provided mapping <kbd><C-W>m</kbd> to toggle zoom in and out
+Simply use the provided mapping <kbd>\<C-W>m</kbd> to toggle zoom in and out
 for the current window
 
 ## Contributing
