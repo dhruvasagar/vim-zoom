@@ -9,7 +9,7 @@ endfunction
 function! s:zoom_session_file()
   if !exists('t:zoom_session_file')
     let t:zoom_session_file = tempname().'_'.tabpagenr()
-    autocmd VimLeavePre * call delete(t:zoom_session_file)
+    autocmd TabClosed * call delete(t:zoom_session_file)
   endif
   return t:zoom_session_file
 endfunction
