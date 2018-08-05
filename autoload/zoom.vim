@@ -17,11 +17,13 @@ endfunction
 function! zoom#toggle()
   if s:is_zoomed()
     exec 'silent! source' s:zoom_session_file()
+    call setqflist(s:qflist)
     call s:set_zoomed()
   else
     let oldsessionoptions = &sessionoptions
     let oldsession = v:this_session
     set sessionoptions-=tabpages
+    let s:qflist = getqflist()
     exec 'mksession!' s:zoom_session_file()
     wincmd o
     call s:set_zoomed(1)
