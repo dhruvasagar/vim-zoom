@@ -6,10 +6,16 @@ function! s:set_zoomed(...)
   let t:zoomed = a:0 ? a:1 : 0
 endfunction
 
+function! s:clean_session_file()
+  if exists('t:zoom_session_file')
+    call delete(t:zoom_session_file)
+  endif
+endfunction
+
 function! s:zoom_session_file()
   if !exists('t:zoom_session_file')
     let t:zoom_session_file = tempname().'_'.tabpagenr()
-    autocmd TabClosed * call delete(t:zoom_session_file)
+    autocmd TabClosed * call s:clean_session_file()
   endif
   return t:zoom_session_file
 endfunction
