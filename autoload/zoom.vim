@@ -22,8 +22,10 @@ endfunction
 
 function! zoom#toggle()
   if s:is_zoomed()
+    let l:current_buffer = bufnr('')
     exec 'silent! source' s:zoom_session_file()
     call setqflist(s:qflist)
+    silent! exe 'b'.l:current_buffer
     call s:set_zoomed()
   else
     let oldsessionoptions = &sessionoptions
