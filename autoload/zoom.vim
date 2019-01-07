@@ -2,6 +2,10 @@ function! s:is_zoomed()
   return get(t:, 'zoomed', 0)
 endfunction
 
+function! s:is_only_window()
+  return len(tabpagebuflist()) == 1
+endfunction
+
 function! s:set_zoomed(...)
   let t:zoomed = a:0 ? a:1 : 0
 endfunction
@@ -28,6 +32,8 @@ function! zoom#toggle()
     silent! exe 'b'.l:current_buffer
     call s:set_zoomed()
   else
+    if s:is_only_window() | return | endif
+
     let oldsessionoptions = &sessionoptions
     let oldsession = v:this_session
     set sessionoptions-=tabpages
