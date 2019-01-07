@@ -17,6 +17,17 @@ your ~/.vim folder. (not recommended)
 Simply use the provided mapping <kbd>\<C-W>m</kbd> to toggle zoom in and out
 for the current window
 
+### Statusline
+
+VIM Zoom provides `zoom#statusline()` API to be used for adding 'zoomed'
+status to your statusline while your window is zoomed. You may add this to
+your statusline like this :
+
+`set statusline+=${zoom#statusline()}`
+
+If you're using some complex statusline plugin, you may need to refer to it's
+documentation to figure out how to add this to your statusline.
+
 ## Contributing
 
 ### Reporting an Issue :
