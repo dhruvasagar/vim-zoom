@@ -32,6 +32,7 @@ function! zoom#toggle()
     silent! exe 'b'.l:current_buffer
     call s:set_zoomed()
   else
+    " skip if only window
     if s:is_only_window() | return | endif
 
     let oldsessionoptions = &sessionoptions
