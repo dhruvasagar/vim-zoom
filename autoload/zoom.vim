@@ -39,3 +39,10 @@ function! zoom#toggle()
     let &sessionoptions = oldsessionoptions
   endif
 endfunction
+
+function! zoom#statusline()
+  if s:is_zoomed()
+    return 'zoomed'
+  endif
+  return ''
+endfunction
