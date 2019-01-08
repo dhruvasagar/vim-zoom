@@ -1,4 +1,4 @@
-*zoom.txt*                     Zoom Window in VIM                       *zoom*
+*zoom.txt*                     Zoom Window in VIM                         *zoom*
 ------------------------------------------------------------------------------
 
                            Toggle current window zoom
@@ -14,6 +14,7 @@ CONTENTS                                                         *zoom-contents*
 
       1. Usage ......................................... |zoom-usage|
       2. Mappings ...................................... |zoom-mappings|
+      3. Statusline .................................... |zoom-statusline|
       3. Contributing .................................. |zoom-contributing|
       4. Report Issues ................................. |zoom-report-issues|
       4. Credits ....................................... |zoom-credits|
@@ -28,7 +29,19 @@ USAGE                                                               *zoom-usage*
 MAPPINGS                                                         *zoom-mappings*
 
       `<C-W>m`: mapping to toggle zoom of current window
+              To change this mapping remap `<Plug>(zoom-toggle)` to your
+              desired mapping like so : >
+                  nmap <My-Mapping> <Plug>(zoom-toggle)
+<
+------------------------------------------------------------------------------
+STATUSLINE                                                     *zoom-statusline*
 
+      `zoom#statusline()`:
+              If the current window is zoomed within the current tab, it
+              returns `'zoomed'` otherwise it's an empty string.
+              You may add it to your statusline using : >
+                  let statusline+=%{zoom#statusline()}
+<
 ------------------------------------------------------------------------------
 CONTRIBUTING                                                 *zoom-contributing*
 
