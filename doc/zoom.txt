@@ -38,10 +38,14 @@ STATUSLINE                                                     *zoom-statusline*
 
       `zoom#statusline()`:
               If the current window is zoomed within the current tab, it
-              returns `'zoomed'` otherwise it's an empty string.
+              returns |g:vim_zoom_statusline| otherwise it's an empty string.
               You may add it to your statusline using : >
                   let statusline+=%{zoom#statusline()}
 <
+
+      `g:vim_zoom_statusline`:                             *g:vim_zoom_statusline*
+              Zoom status indicator text. Defaults to `'zoomed'`.
+
 ------------------------------------------------------------------------------
 CONTRIBUTING                                                 *zoom-contributing*
 
