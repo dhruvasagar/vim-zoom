@@ -19,9 +19,10 @@ for the current window
 
 ### Statusline
 
-VIM Zoom provides `zoom#statusline()` API to be used for adding 'zoomed'
-status to your statusline while your window is zoomed. You may add this to
-your statusline like this :
+VIM Zoom provides `zoom#statusline()` API to be used for adding
+`g:zoom#statustext` value to your statusline while your window is zoomed.
+`g:zoom#statustext` defaults to value `'status'`. You may add this to your
+statusline like this :
 
 `set statusline+=%{zoom#statusline()}`
 
