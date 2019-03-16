@@ -3,7 +3,7 @@
 
                            Toggle current window zoom
                              Inspired by tmux zoom
-                                  Version 0.3
+                                  Version 0.3.1
 
 
                  Author: Dhruva Sagar (http://dhruvasagar.com)
@@ -13,17 +13,28 @@
 CONTENTS                                                         *zoom-contents*
 
       1. Usage ......................................... |zoom-usage|
-      2. Mappings ...................................... |zoom-mappings|
-      3. Statusline .................................... |zoom-statusline|
-      3. Contributing .................................. |zoom-contributing|
-      4. Report Issues ................................. |zoom-report-issues|
-      4. Credits ....................................... |zoom-credits|
+      2. Options ....................................... |zoom-options|
+      3. Mappings ...................................... |zoom-mappings|
+      4. Statusline .................................... |zoom-statusline|
+      5. Contributing .................................. |zoom-contributing|
+      6. Report Issues ................................. |zoom-report-issues|
+      7. Credits ....................................... |zoom-credits|
 
 ------------------------------------------------------------------------------
 USAGE                                                               *zoom-usage*
 
       Use the provided mapping `<C-W>m` on the current split and it will toggle
       it to zoom in and out on subsequent calls.
+
+------------------------------------------------------------------------------
+OPTIONS                                                           *zoom-options*
+
+                                                               *zoom-statustext*
+      `g:zoom#statustext`:
+              Sets the value to be returned by `zoom#statusline()` when zoomed
+              in. >
+                  let g:zoom#statustext = 'zoomed'
+<
 
 ------------------------------------------------------------------------------
 MAPPINGS                                                         *zoom-mappings*
@@ -37,8 +48,9 @@ MAPPINGS                                                         *zoom-mappings*
 STATUSLINE                                                     *zoom-statusline*
 
       `zoom#statusline()`:
-              If the current window is zoomed within the current tab, it
-              returns `'zoomed'` otherwise it's an empty string.
+              If the current window is zoomed within the current tab, it returns
+              value of option `g:zoom#statustext` otherwise it's an empty
+              string.
               You may add it to your statusline using : >
                   let statusline+=%{zoom#statusline()}
 <
