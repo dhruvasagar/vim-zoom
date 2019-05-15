@@ -8,6 +8,11 @@ This is heavily inspired from tmux's zoom pane feature.
 
 Use your favorite plugin manager to install this plugin (recommended).
 
+#### [pathogen.vim](https://github.com/tpope/vim-pathogen)
+```
+git clone https://github.com/dhruvasagar/vim-zoom.git ~/.vim/bundle/vim-zoom
+```
+
 If however you don't use a plugin manager such as pathogen, vundle, neobundle,
 vim-plug then you can copy all files within this repository directly within
 your ~/.vim folder. (not recommended)
