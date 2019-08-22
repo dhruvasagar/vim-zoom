@@ -26,11 +26,13 @@ endfunction
 
 function! zoom#toggle()
   if s:is_zoomed()
+    let cursor_pos = getpos('.')
     let l:current_buffer = bufnr('')
     exec 'silent! source' s:zoom_session_file()
     call setqflist(s:qflist)
     silent! exe 'b'.l:current_buffer
     call s:set_zoomed()
+    call setpos('.', cursor_pos)
   else
     " skip if only window
     if s:is_only_window() | return | endif
