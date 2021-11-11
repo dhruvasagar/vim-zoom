@@ -3,7 +3,7 @@
 
                            Toggle current window zoom
                              Inspired by tmux zoom
-                                  Version 0.3.1
+                                  Version 0.3.2
 
 
                  Author: Dhruva Sagar (http://dhruvasagar.com)
@@ -35,6 +35,11 @@ OPTIONS                                                           *zoom-options*
               in. >
                   let g:zoom#statustext = 'zoomed'
 <
+                                                                 *zoom-tmux_z*
+      `g:zoom_tmux_z`:
+              Enables the key binding `<C-W>z` when not within tmux >
+                  let g:zoom_tmux_z = v:false
+<
 
 ------------------------------------------------------------------------------
 MAPPINGS                                                         *zoom-mappings*
@@ -44,6 +49,9 @@ MAPPINGS                                                         *zoom-mappings*
               desired mapping like so : >
                   nmap <My-Mapping> <Plug>(zoom-toggle)
 <
+      `<C-W>z`: mapping to toggle zoom of current window when not within
+      a tmux session, enabled only if `g:zoom_tmux_z` is set to *v:true*
+
 ------------------------------------------------------------------------------
 STATUSLINE                                                     *zoom-statusline*
 
