@@ -49,7 +49,7 @@ function! zoom#toggle()
 
     let oldsessionoptions = &sessionoptions
     let oldsession = v:this_session
-    set sessionoptions-=tabpages
+    set sessionoptions-=sesdir,tabpages
     set sessionoptions+=blank,buffers,curdir,terminal,help
     let s:qflist = getqflist()
     exec 'mksession!' s:zoom_session_file()
