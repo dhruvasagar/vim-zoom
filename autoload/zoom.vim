@@ -49,8 +49,12 @@ function! zoom#toggle()
 
     let oldsessionoptions = &sessionoptions
     let oldsession = v:this_session
-    set sessionoptions-=sesdir,tabpages
-    set sessionoptions+=blank,buffers,curdir,terminal,help
+    set sessionoptions-=tabpages
+    if matchstr(&sessionoptions, 'sesdir') ==# ''
+      set sessionoptions+=blank,buffers,curdir,terminal,help
+    else
+      set sessionoptions+=blank,buffers,terminal,help
+    endif
     let s:qflist = getqflist()
     exec 'mksession!' s:zoom_session_file()
     wincmd o
