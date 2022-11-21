@@ -31,22 +31,38 @@ statusline like this :
 
 `set statusline+=%{zoom#statusline()}`
 
-If you're using some complex statusline plugin, you may need to refer to it's
+If you're using some complex statusline plugin, you may need to refer to its
 documentation to figure out how to add this to your statusline.
 
+#### Example configuration for lualine.nvim
+
+```
+-- Set lualine options
+sections = {
+-- left
+lualine_a = { 'mode' },
+lualine_b = { 'branch', 'diff', 'diagnostic' },
+lualine_c = { 'filename' },
+-- right
+lualine_x = { "vim.fn['zoom#statusline']()", 'encoding', 'fileformat', 'filetype' },
+lualine_y = { 'progress' },
+lualine_z = { 'location' }
+})
+```
+Contributions of configurations for other statusline plugins are appreciated.
+
 ## Contributing
+
+### Contributing to code :
+
+- Fork it. Commit your changes and give your commit message some love.
+- Push to your fork on github.
+- Open a Pull Request.
 
 ### Reporting an Issue :
 
 Use <a href="https://github.com/dhruvasagar/vim-zoom/issues">Github Issue
 Tracker</a>
-
-### Contributing to code :
-
-- Fork it.
-- Commit your changes and give your commit message some love.
-- Push to your fork on github.
-- Open a Pull Request.
 
 ## Credits
 
