@@ -28,7 +28,7 @@ function! s:zoom_session_file()
   return t:zoom_session_file
 endfunction
 
-function! zoom#toggle()
+function! zoom#toggle() abort
   if s:is_zoomed()
     if exists('#User#ZoomPre')
       doautocmd User ZoomPre
