@@ -3,7 +3,7 @@
 
                            Toggle current window zoom
                              Inspired by tmux zoom
-                                  Version 0.3.3
+                                  Version 0.3.4
 
 
                  Author: Dhruva Sagar (http://dhruvasagar.com)
@@ -62,6 +62,20 @@ STATUSLINE                                                     *zoom-statusline*
               You may add it to your statusline using : >
                   let statusline+=%{zoom#statusline()}
 <
+
+      Example configuration for lualine.nvim >
+                  -- Set lualine options
+                  sections = {
+                  -- left
+                  lualine_a = { 'mode' },
+                  lualine_b = { 'branch', 'diff', 'diagnostic' },
+                  lualine_c = { 'filename' },
+                  -- right
+                  lualine_x = { "vim.fn['zoom#statusline']()", 'encoding', 'fileformat', 'filetype' },
+                  lualine_y = { 'progress' },
+                  lualine_z = { 'location' }
+                  })
+<
 ------------------------------------------------------------------------------
 CONTRIBUTING                                                 *zoom-contributing*
 
@@ -78,4 +92,3 @@ REPORT ISSUES                                               *zoom-report-issues*
 CREDITS                                                           *zoom-credits*
 
       The idea is inspired heavily from tmux's zoom functionality
-

@@ -1,4 +1,4 @@
-# VIM Zoom v0.3.3
+# VIM Zoom v0.3.4
 
 A simple plugin to toggle zoom of current window within the current tab.
 
@@ -9,6 +9,7 @@ This is heavily inspired from tmux's zoom pane feature.
 Use your favorite plugin manager to install this plugin (recommended).
 
 #### [pathogen.vim](https://github.com/tpope/vim-pathogen)
+
 ```
 git clone https://github.com/dhruvasagar/vim-zoom.git ~/.vim/bundle/vim-zoom
 ```
@@ -36,7 +37,7 @@ documentation to figure out how to add this to your statusline.
 
 #### Example configuration for lualine.nvim
 
-```
+```lua
 -- Set lualine options
 sections = {
 -- left
@@ -49,13 +50,15 @@ lualine_y = { 'progress' },
 lualine_z = { 'location' }
 })
 ```
+
 Contributions of configurations for other statusline plugins are appreciated.
 
 ## Contributing
 
 ### Contributing to code :
 
-- Fork it. Commit your changes and give your commit message some love.
+- Fork it.
+- Commit your changes and give your commit message some love.
 - Push to your fork on github.
 - Open a Pull Request.
 
