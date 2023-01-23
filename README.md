@@ -29,7 +29,7 @@ for the current window
 > our plugin less than 100 lines of code.
 
 > If that doesn't work for you and for other more advanced use cases you may
-> want to consider alternate plugins such as [https://github.com/junegunn/goyo.vim](goyo.vim)
+> want to consider alternate plugins such as [goyo.vim](https://github.com/junegunn/goyo.vim)
 
 ### Statusline
 
