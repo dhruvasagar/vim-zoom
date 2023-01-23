@@ -23,6 +23,14 @@ your ~/.vim folder. (not recommended)
 Simply use the provided mapping <kbd>\<C-W>m</kbd> to toggle zoom in and out
 for the current window
 
+> NOTE: In an attempt to keep this plugin as lean as possible, it avoids
+> having to deal with special buffers created by plugins that aren't backed by
+> actual files. This is a trade-off we've made consiously and helps us keep
+> our plugin less than 100 lines of code.
+
+> If that work for you and for other more advanced use cases you may want to
+> consider alternate plugins such as [https://github.com/junegunn/goyo.vim](goyo.vim)
+
 ### Statusline
 
 VIM Zoom provides `zoom#statusline()` API to be used for adding
