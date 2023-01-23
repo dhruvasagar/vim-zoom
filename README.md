@@ -28,8 +28,8 @@ for the current window
 > actual files. This is a trade-off we've made consiously and helps us keep
 > our plugin less than 100 lines of code.
 
-> If that work for you and for other more advanced use cases you may want to
-> consider alternate plugins such as [https://github.com/junegunn/goyo.vim](goyo.vim)
+> If that doesn't work for you and for other more advanced use cases you may
+> want to consider alternate plugins such as [https://github.com/junegunn/goyo.vim](goyo.vim)
 
 ### Statusline
 
