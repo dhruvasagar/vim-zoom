@@ -35,7 +35,7 @@ for the current window
 
 VIM Zoom provides `zoom#statusline()` API to be used for adding
 `g:zoom#statustext` value to your statusline while your window is zoomed.
-`g:zoom#statustext` defaults to value `'status'`. You may add this to your
+`g:zoom#statustext` defaults to value `'zoomed'`. You may add this to your
 statusline like this :
 
 `set statusline+=%{zoom#statusline()}`
@@ -72,8 +72,7 @@ Contributions of configurations for other statusline plugins are appreciated.
 
 ### Reporting an Issue :
 
-Use <a href="https://github.com/dhruvasagar/vim-zoom/issues">Github Issue
-Tracker</a>
+Use [Github Issue Tracker](https://github.com/dhruvasagar/vim-zoom/issues)
 
 ## Credits
 
